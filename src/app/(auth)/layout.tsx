@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, message, Layout } from "antd";
+import { Button, Layout } from "antd";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -17,7 +17,6 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
 
   const handleLogout = async () => {
     await logout();
-    message.success("Logged out!");
     router.push("/login");
   };
 
